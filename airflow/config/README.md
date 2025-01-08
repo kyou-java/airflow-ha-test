@@ -1,0 +1,1 @@
+You can add custom log parser or add airflow_local_settings.py to configure cluster policy.
