@@ -302,16 +302,5 @@ services:
       airflow-init:
         condition: service_completed_successfully
 
-  statsd-exporter:
-    image: prom/statsd-exporter:v0.28.0
-    command:
-      - "--statsd.mapping-config=/statsd-mapping.conf"
-      - "--log.level=debug"
-    ports:
-      - "9102:9102"
-      - "8125:8125/udp"
-    volumes:
-      - "./statsd/statsd-mapping.conf:/statsd-mapping.conf"
-
 volumes:
   postgres-db-volume:
