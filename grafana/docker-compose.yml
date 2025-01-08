@@ -1,0 +1,11 @@
+services:
+  grafana:
+    image: grafana/grafana:11.4.0
+    ports:
+      - 3001:3000
+    volumes:
+      - grafana-storage:/var/lib/grafana
+    restart: unless-stopped
+
+volumes:
+  grafana-storage: {}

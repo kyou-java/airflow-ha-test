@@ -1,0 +1,12 @@
+services:
+  prometheus:
+    image: prom/prometheus:v3.1.0
+    ports:
+      - 9190:9090
+    volumes:
+      - .:/etc/prometheus
+      - prometheus-data:/prometheus
+    restart: unless-stopped
+
+volumes:
+  prometheus-data: {}
